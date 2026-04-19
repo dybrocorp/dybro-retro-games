@@ -185,7 +185,7 @@ fun DashboardScreen(
             when (currentTab) {
                 0 -> HomeTab(filteredGames, recents, favorites, theme, onGameClick, onDeleteClick, onFavoriteClick)
                 1 -> SystemCategories(filteredGames, favorites, theme, onGameClick, onDeleteClick, onFavoriteClick)
-                3 -> ThemesScreen(theme, onThemeSelected)
+                3 -> ThemesScreen(theme, authManager, onThemeSelected)
                 4 -> SettingsScreen(theme, settings, authManager, statsManager, onSettingsChanged)
                 else -> PlaceholderText("Próximamente", theme)
             }
@@ -420,7 +420,8 @@ fun PlaceholderText(text: String, theme: AppTheme) {
 }
 
 @Composable
-fun ThemesScreen(currentTheme: AppTheme, onThemeSelected: (AppTheme) -> Unit) {
+fun ThemesScreen(currentTheme: AppTheme, authManager: AuthManager, onThemeSelected: (AppTheme) -> Unit) {
+    val isPremium = authManager.isPremium()
     Column {
         Text("Selecciona un Tema", color = currentTheme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         Spacer(modifier = Modifier.height(16.dp))
@@ -430,13 +431,14 @@ fun ThemesScreen(currentTheme: AppTheme, onThemeSelected: (AppTheme) -> Unit) {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             items(ThemeConfigs.allThemes) { themeOption ->
+                val isPremiumTheme = themeOption.name == "Cyber Neon" || themeOption.name == "Clean Light"
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(120.dp)
                         .clip(RoundedCornerShape(12.dp))
                         .background(themeOption.surface)
-                        .clickable { onThemeSelected(themeOption) }
+                        .clickable(enabled = !isPremiumTheme || isPremium) { onThemeSelected(themeOption) }
                 ) {
                     Column(
                         modifier = Modifier
@@ -444,11 +446,16 @@ fun ThemesScreen(currentTheme: AppTheme, onThemeSelected: (AppTheme) -> Unit) {
                             .padding(12.dp),
                         verticalArrangement = Arrangement.SpaceBetween
                     ) {
-                        Text(
-                            text = themeOption.name,
-                            color = themeOption.textPrimary,
-                            fontWeight = FontWeight.Bold
-                        )
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            if (isPremiumTheme && !isPremium) {
+                                Text("🔒 ", fontSize = 12.sp)
+                            }
+                            Text(
+                                text = themeOption.name,
+                                color = if (!isPremiumTheme || isPremium) themeOption.textPrimary else themeOption.textSecondary.copy(alpha=0.5f),
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             Box(modifier = Modifier.size(24.dp).background(themeOption.background, RoundedCornerShape(4.dp)))
                             Box(modifier = Modifier.size(24.dp).background(themeOption.accent, RoundedCornerShape(4.dp)))
@@ -565,7 +572,8 @@ fun UserProfileSection(theme: AppTheme, authManager: AuthManager, statsManager: 
 
 @Composable
 fun SettingsScreen(theme: AppTheme, settings: AppSettings, authManager: AuthManager, statsManager: StatsManager, onSettingsChanged: (AppSettings) -> Unit) {
-    Column(modifier = Modifier.fillMaxSize()) {
+    val isPremium = authManager.isPremium()
+    Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
         Text("Ajustes del Emulador", color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         Spacer(modifier = Modifier.height(16.dp))
         
@@ -671,18 +679,24 @@ fun SettingsScreen(theme: AppTheme, settings: AppSettings, authManager: AuthMana
             Row(modifier = Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 skins.forEach { skin ->
                     val isSelected = settings.gamepadSkin == skin
+                    val isPremiumSkin = skin != "Clásico" // "Clásico" es la única gratis
+
                     Surface(
                         color = if (isSelected) theme.accent else theme.background,
                         shape = RoundedCornerShape(16.dp),
-                        modifier = Modifier.clickable { onSettingsChanged(settings.copy(gamepadSkin = skin)) }
+                        modifier = Modifier.clickable(enabled = !isPremiumSkin || isPremium) { onSettingsChanged(settings.copy(gamepadSkin = skin)) }
                     ) {
-                        Text(
-                            text = skin,
-                            color = if (isSelected) theme.background else theme.textPrimary,
-                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp),
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 12.sp
-                        )
+                        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
+                            if (isPremiumSkin && !isPremium) {
+                                Text("🔒 ", fontSize = 10.sp)
+                            }
+                            Text(
+                                text = skin,
+                                color = if (!isPremiumSkin || isPremium) (if (isSelected) theme.background else theme.textPrimary) else theme.textSecondary.copy(alpha=0.5f),
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 12.sp
+                            )
+                        }
                     }
                 }
             }
