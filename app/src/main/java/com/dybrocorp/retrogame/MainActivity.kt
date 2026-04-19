@@ -258,14 +258,13 @@ class MainActivity : ComponentActivity() {
                 )
                 
                 Surface(
-                    color = theme.surface,
+                    color = theme.surface.copy(alpha = 0.7f),
+                    shape = RoundedCornerShape(bottomStart = 12.dp, bottomEnd = 12.dp),
                     modifier = Modifier
-                        .align(Alignment.TopEnd)
-                        .padding(16.dp)
+                        .align(Alignment.TopCenter)
                         .clickable { inMenuOverlay = true }
-                        .padding(8.dp)
                 ) {
-                    Text("Menú", color = theme.textPrimary, fontSize = 12.sp)
+                    Text("▼ MENÚ", color = theme.textPrimary, fontSize = 10.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 24.dp, vertical = 4.dp))
                 }
 
                 // Overlay de controles
