@@ -1,0 +1,22 @@
+[
+{
+  "directory": "C:/Users/Dybro/Desktop/DybroGameRetro/app/.cxx/Debug/38354y33/arm64-v8a",
+  "command": "C:\\Users\\Dybro\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android26 --sysroot=C:/Users/Dybro/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dretro_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\retro.dir\\native-lib.cpp.o -c C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\src\\main\\cpp\\native-lib.cpp",
+  "file": "C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\src\\main\\cpp\\native-lib.cpp"
+},
+{
+  "directory": "C:/Users/Dybro/Desktop/DybroGameRetro/app/.cxx/Debug/38354y33/arm64-v8a",
+  "command": "C:\\Users\\Dybro\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android26 --sysroot=C:/Users/Dybro/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dretro_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\retro.dir\\CoreManager.cpp.o -c C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\src\\main\\cpp\\CoreManager.cpp",
+  "file": "C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\src\\main\\cpp\\CoreManager.cpp"
+},
+{
+  "directory": "C:/Users/Dybro/Desktop/DybroGameRetro/app/.cxx/Debug/38354y33/arm64-v8a",
+  "command": "C:\\Users\\Dybro\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android26 --sysroot=C:/Users/Dybro/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dretro_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\retro.dir\\VideoRenderer.cpp.o -c C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\src\\main\\cpp\\VideoRenderer.cpp",
+  "file": "C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\src\\main\\cpp\\VideoRenderer.cpp"
+},
+{
+  "directory": "C:/Users/Dybro/Desktop/DybroGameRetro/app/.cxx/Debug/38354y33/arm64-v8a",
+  "command": "C:\\Users\\Dybro\\AppData\\Local\\Android\\Sdk\\ndk\\25.1.8937393\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe --target=aarch64-none-linux-android26 --sysroot=C:/Users/Dybro/AppData/Local/Android/Sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/windows-x86_64/sysroot -Dretro_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -fno-limit-debug-info  -fPIC -o CMakeFiles\\retro.dir\\AudioRenderer.cpp.o -c C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\src\\main\\cpp\\AudioRenderer.cpp",
+  "file": "C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\src\\main\\cpp\\AudioRenderer.cpp"
+}
+]

@@ -1,0 +1,2 @@
+ninja: Entering directory `C:\Users\Dybro\Desktop\DybroGameRetro\app\.cxx\Debug\38354y33\x86'
+ninja: no work to do.

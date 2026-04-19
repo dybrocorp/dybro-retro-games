@@ -1,0 +1,546 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\0bad7cbe971eacd5d04f9ed79c81a484\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7acc0041895cd07a65d10ff766dca577\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e539507d967afd38bdec7bb9d881ab8f\transformed\play-services-fido-20.0.1\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\a558ca28f407e99718ccc3ad99f8b3ff\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:15:1-25:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\038e94629808249c3dc490da2d821280\transformed\integrity-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7e74e075912ebfe1c9b3ad94df159483\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:15:1-41:12
+MERGED from [androidx.compose.material3:material3:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\298ed053e96f8923163c3a1c00e9f6d0\transformed\material3-1.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.8.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\8319581fc05a7e577a4eced5f9bf8e7e\transformed\activity-1.8.2\AndroidManifest.xml:17:1-22:12
+MERGED from [io.coil-kt:coil-compose:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\54cb0bb423a27315d6237cd959e91004\transformed\coil-compose-2.6.0\AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-compose-base:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\eb8ec849ac0189f34d164fcbe874c181\transformed\coil-compose-base-2.6.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c16f46b356c873ae548e88cc39d45446\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.compose.material:material-ripple-android:1.5.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\834dc708ff20132c474a54c7fa20e7d1\transformed\material-ripple-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-extended-android:1.5.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7287ff0e2c25bea64e7cd38e5986d431\transformed\material-icons-extended-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\bedc0cbe880425b2d7730cccb22a012e\transformed\material-icons-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\62992d3655117f03b85486086ef5de40\transformed\animation-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b3d654e005934cca88a40532140bdcf5\transformed\animation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e847813133e09a6005559ad179e8e775\transformed\foundation-layout-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\9b0789a0d84e60fc76c1c497a08f4b0b\transformed\foundation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d40b0d361392e35ece9bca647e348305\transformed\ui-tooling-preview-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c22e5094b37f1d78222ff4514250939b\transformed\ui-unit-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\812f956067a1dfb94001e2f4338832ca\transformed\ui-graphics-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\866df986de87a0ee8ce17428d8f65708\transformed\ui-geometry-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\a2810c79f897613a4e81194888d648cd\transformed\ui-util-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\25a7c3169c932e7cb7ca70ea8145e08e\transformed\ui-text-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\54418cdc9da5eb984f234258b750b9f7\transformed\ui-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c8c4ddb898132d52cf8e006dab203271\transformed\activity-ktx-1.8.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\2fd757bb2ba2bb845620610a565be64d\transformed\activity-compose-1.8.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1561b0c6e490f18b48757c92a696edc2\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\f1e23778ad81ff4c0fec58796d80b308\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b6b56e04cc08c4c565edab70cb61c6be\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\0d071b3c0462ebe52d8664b391551fca\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\9bf332ccb2c8cc814d4ed7f90660f108\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\0ba6260a79fcb7c90e66011994cf9aa5\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [io.coil-kt:coil:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4683fc1cf400ff3542902cef6fcc89ad\transformed\coil-2.6.0\AndroidManifest.xml:2:1-7:12
+MERGED from [io.coil-kt:coil-base:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\fcde7a68ae4e07171cc8ebee6ba66cfa\transformed\coil-base-2.6.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\019e6ee5dfd82ae228e235f83a64e157\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e25a30a678830512d717dd73e0948bc0\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\569ef69af1fed0b99f1a53816867b5e0\transformed\runtime-saveable-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\94a7560539aba6260d4d4718572ca873\transformed\runtime-release\AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c55965a69d290fa94ec1cc91dfea8c3b\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.5.7] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\f680a3677992cff72e532334f4ca6120\transformed\fragment-1.5.7\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1486eca22a028449cb85f27e02ef6814\transformed\loader-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ccba2800afdfedff79810319337f997b\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3026de57ad906ce0d5097304f835d162\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b047e4bf362f400967d10bcfdc97cd25\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\93f7f7c393d4d93cd6e9dc42dde1f049\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1ce33502f28675e1b0486280942b868b\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b01e26af2edca974475a04bb199d3b01\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\2e0b792dc2dd2dfca05185d6ed008f90\transformed\autofill-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\cc4e3f129987e99d7bebf14cf811be57\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b29e2e036bbfa54060f614366dbd3594\transformed\core-ktx-1.12.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\00ef36430f819ad6325eda4626dcab65\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\588c215a852362774f8ebc27f252fe00\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\f8d80f3bbd6487bd9e6a67604e951d3f\transformed\firebase-components-17.1.5\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\63b472e0167f5de4ab1329ba03269346\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\fde0f208d038f226e2a629f8bc78778b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ec5717ca720f2d728943a95e061fe6df\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d37c4e44d3e134c061b6a3de35c52c71\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\165e3215a641a282006008fa191254a9\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ecb54c7ca1fb8484857f3b3a4630c9e0\transformed\exifinterface-1.3.7\AndroidManifest.xml:17:1-24:12
+	package
+		INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:3:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:3:22-64
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:4:5-80
+	android:name
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:4:22-77
+application
+ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:6:5-22:19
+INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:6:5-22:19
+MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e539507d967afd38bdec7bb9d881ab8f\transformed\play-services-fido-20.0.1\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e539507d967afd38bdec7bb9d881ab8f\transformed\play-services-fido-20.0.1\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\a558ca28f407e99718ccc3ad99f8b3ff\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\a558ca28f407e99718ccc3ad99f8b3ff\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\038e94629808249c3dc490da2d821280\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\038e94629808249c3dc490da2d821280\transformed\integrity-1.2.0\AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7e74e075912ebfe1c9b3ad94df159483\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7e74e075912ebfe1c9b3ad94df159483\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:22:5-39:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c55965a69d290fa94ec1cc91dfea8c3b\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c55965a69d290fa94ec1cc91dfea8c3b\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\fde0f208d038f226e2a629f8bc78778b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\fde0f208d038f226e2a629f8bc78778b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d37c4e44d3e134c061b6a3de35c52c71\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d37c4e44d3e134c061b6a3de35c52c71\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:11:9-35
+	android:label
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:10:9-41
+	android:roundIcon
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:8:9-43
+	android:allowBackup
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:7:9-35
+	android:theme
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:12:9-48
+activity#com.dybrocorp.retrogame.MainActivity
+ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:13:9-21:20
+	android:exported
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:15:13-36
+	android:configChanges
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:16:13-91
+	android:name
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:14:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:17:13-20:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:18:17-69
+	android:name
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:18:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:19:17-77
+	android:name
+		ADDED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:19:27-74
+uses-sdk
+INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml
+MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\0bad7cbe971eacd5d04f9ed79c81a484\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\0bad7cbe971eacd5d04f9ed79c81a484\transformed\play-services-auth-api-phone-18.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7acc0041895cd07a65d10ff766dca577\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.10] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7acc0041895cd07a65d10ff766dca577\transformed\play-services-auth-base-18.0.10\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e539507d967afd38bdec7bb9d881ab8f\transformed\play-services-fido-20.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e539507d967afd38bdec7bb9d881ab8f\transformed\play-services-fido-20.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\a558ca28f407e99718ccc3ad99f8b3ff\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\a558ca28f407e99718ccc3ad99f8b3ff\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\038e94629808249c3dc490da2d821280\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\038e94629808249c3dc490da2d821280\transformed\integrity-1.2.0\AndroidManifest.xml:4:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7e74e075912ebfe1c9b3ad94df159483\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7e74e075912ebfe1c9b3ad94df159483\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:19:5-44
+MERGED from [androidx.compose.material3:material3:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\298ed053e96f8923163c3a1c00e9f6d0\transformed\material3-1.1.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\298ed053e96f8923163c3a1c00e9f6d0\transformed\material3-1.1.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\8319581fc05a7e577a4eced5f9bf8e7e\transformed\activity-1.8.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\8319581fc05a7e577a4eced5f9bf8e7e\transformed\activity-1.8.2\AndroidManifest.xml:20:5-44
+MERGED from [io.coil-kt:coil-compose:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\54cb0bb423a27315d6237cd959e91004\transformed\coil-compose-2.6.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\54cb0bb423a27315d6237cd959e91004\transformed\coil-compose-2.6.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\eb8ec849ac0189f34d164fcbe874c181\transformed\coil-compose-base-2.6.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-compose-base:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\eb8ec849ac0189f34d164fcbe874c181\transformed\coil-compose-base-2.6.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c16f46b356c873ae548e88cc39d45446\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.accompanist:accompanist-drawablepainter:0.32.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c16f46b356c873ae548e88cc39d45446\transformed\accompanist-drawablepainter-0.32.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.5.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\834dc708ff20132c474a54c7fa20e7d1\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.5.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\834dc708ff20132c474a54c7fa20e7d1\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.5.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7287ff0e2c25bea64e7cd38e5986d431\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-extended-android:1.5.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7287ff0e2c25bea64e7cd38e5986d431\transformed\material-icons-extended-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\bedc0cbe880425b2d7730cccb22a012e\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\bedc0cbe880425b2d7730cccb22a012e\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\62992d3655117f03b85486086ef5de40\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\62992d3655117f03b85486086ef5de40\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b3d654e005934cca88a40532140bdcf5\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b3d654e005934cca88a40532140bdcf5\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e847813133e09a6005559ad179e8e775\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e847813133e09a6005559ad179e8e775\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\9b0789a0d84e60fc76c1c497a08f4b0b\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\9b0789a0d84e60fc76c1c497a08f4b0b\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d40b0d361392e35ece9bca647e348305\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d40b0d361392e35ece9bca647e348305\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c22e5094b37f1d78222ff4514250939b\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c22e5094b37f1d78222ff4514250939b\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\812f956067a1dfb94001e2f4338832ca\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\812f956067a1dfb94001e2f4338832ca\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\866df986de87a0ee8ce17428d8f65708\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\866df986de87a0ee8ce17428d8f65708\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\a2810c79f897613a4e81194888d648cd\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\a2810c79f897613a4e81194888d648cd\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\25a7c3169c932e7cb7ca70ea8145e08e\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\25a7c3169c932e7cb7ca70ea8145e08e\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\54418cdc9da5eb984f234258b750b9f7\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\54418cdc9da5eb984f234258b750b9f7\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c8c4ddb898132d52cf8e006dab203271\transformed\activity-ktx-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c8c4ddb898132d52cf8e006dab203271\transformed\activity-ktx-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\2fd757bb2ba2bb845620610a565be64d\transformed\activity-compose-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\2fd757bb2ba2bb845620610a565be64d\transformed\activity-compose-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1561b0c6e490f18b48757c92a696edc2\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1561b0c6e490f18b48757c92a696edc2\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\f1e23778ad81ff4c0fec58796d80b308\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\f1e23778ad81ff4c0fec58796d80b308\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b6b56e04cc08c4c565edab70cb61c6be\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b6b56e04cc08c4c565edab70cb61c6be\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\0d071b3c0462ebe52d8664b391551fca\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\0d071b3c0462ebe52d8664b391551fca\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\9bf332ccb2c8cc814d4ed7f90660f108\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\9bf332ccb2c8cc814d4ed7f90660f108\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\0ba6260a79fcb7c90e66011994cf9aa5\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\0ba6260a79fcb7c90e66011994cf9aa5\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [io.coil-kt:coil:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4683fc1cf400ff3542902cef6fcc89ad\transformed\coil-2.6.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4683fc1cf400ff3542902cef6fcc89ad\transformed\coil-2.6.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\fcde7a68ae4e07171cc8ebee6ba66cfa\transformed\coil-base-2.6.0\AndroidManifest.xml:5:5-44
+MERGED from [io.coil-kt:coil-base:2.6.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\fcde7a68ae4e07171cc8ebee6ba66cfa\transformed\coil-base-2.6.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\019e6ee5dfd82ae228e235f83a64e157\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\019e6ee5dfd82ae228e235f83a64e157\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e25a30a678830512d717dd73e0948bc0\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\e25a30a678830512d717dd73e0948bc0\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\569ef69af1fed0b99f1a53816867b5e0\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\569ef69af1fed0b99f1a53816867b5e0\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\94a7560539aba6260d4d4718572ca873\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\94a7560539aba6260d4d4718572ca873\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c55965a69d290fa94ec1cc91dfea8c3b\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\c55965a69d290fa94ec1cc91dfea8c3b\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.5.7] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\f680a3677992cff72e532334f4ca6120\transformed\fragment-1.5.7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.7] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\f680a3677992cff72e532334f4ca6120\transformed\fragment-1.5.7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1486eca22a028449cb85f27e02ef6814\transformed\loader-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1486eca22a028449cb85f27e02ef6814\transformed\loader-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ccba2800afdfedff79810319337f997b\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ccba2800afdfedff79810319337f997b\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3026de57ad906ce0d5097304f835d162\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3026de57ad906ce0d5097304f835d162\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b047e4bf362f400967d10bcfdc97cd25\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b047e4bf362f400967d10bcfdc97cd25\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\93f7f7c393d4d93cd6e9dc42dde1f049\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\93f7f7c393d4d93cd6e9dc42dde1f049\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1ce33502f28675e1b0486280942b868b\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1ce33502f28675e1b0486280942b868b\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b01e26af2edca974475a04bb199d3b01\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b01e26af2edca974475a04bb199d3b01\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\2e0b792dc2dd2dfca05185d6ed008f90\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\2e0b792dc2dd2dfca05185d6ed008f90\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\cc4e3f129987e99d7bebf14cf811be57\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\cc4e3f129987e99d7bebf14cf811be57\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b29e2e036bbfa54060f614366dbd3594\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\b29e2e036bbfa54060f614366dbd3594\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\00ef36430f819ad6325eda4626dcab65\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\00ef36430f819ad6325eda4626dcab65\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\588c215a852362774f8ebc27f252fe00\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\588c215a852362774f8ebc27f252fe00\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\f8d80f3bbd6487bd9e6a67604e951d3f\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\f8d80f3bbd6487bd9e6a67604e951d3f\transformed\firebase-components-17.1.5\AndroidManifest.xml:18:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\63b472e0167f5de4ab1329ba03269346\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\63b472e0167f5de4ab1329ba03269346\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\fde0f208d038f226e2a629f8bc78778b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\fde0f208d038f226e2a629f8bc78778b\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ec5717ca720f2d728943a95e061fe6df\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ec5717ca720f2d728943a95e061fe6df\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d37c4e44d3e134c061b6a3de35c52c71\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d37c4e44d3e134c061b6a3de35c52c71\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\165e3215a641a282006008fa191254a9\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\165e3215a641a282006008fa191254a9\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ecb54c7ca1fb8484857f3b3a4630c9e0\transformed\exifinterface-1.3.7\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.7] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ecb54c7ca1fb8484857f3b3a4630c9e0\transformed\exifinterface-1.3.7\AndroidManifest.xml:20:5-22:41
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:23:9-61
+	android:targetSdkVersion
+		INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:34:13-89
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:22-76
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:30:9-38:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:68:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:67:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+	android:name
+		ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:36:17-109
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d37c4e44d3e134c061b6a3de35c52c71\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d37c4e44d3e134c061b6a3de35c52c71\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+permission#com.dybrocorp.retrogame.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+uses-permission#com.dybrocorp.retrogame.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92

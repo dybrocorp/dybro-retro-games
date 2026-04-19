@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\src\\main\\cpp\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Users\\Dybro\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\.cxx\\Debug\\38354y33\\x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Users\\Dybro\\AppData\\Local\\Android\\Sdk\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\.cxx\\Debug\\38354y33\\x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "retro::@6890427a1f51a3e7e1df": {
+      "artifactName": "retro",
+      "abi": "x86",
+      "output": "C:\\Users\\Dybro\\Desktop\\DybroGameRetro\\app\\build\\intermediates\\cxx\\Debug\\38354y33\\obj\\x86\\libretro.so",
+      "runtimeFiles": []
+    }
+  }
+}

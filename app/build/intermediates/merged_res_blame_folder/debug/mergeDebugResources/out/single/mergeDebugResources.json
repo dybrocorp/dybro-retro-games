@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "com.dybrocorp.retrogame.app-debug-50:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.dybrocorp.retrogame.app-main-52:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.dybrocorp.retrogame.app-debug-50:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.dybrocorp.retrogame.app-main-52:/mipmap-xxxhdpi/ic_launcher.png"
+    }
+]

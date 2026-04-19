@@ -1,0 +1,291 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.dybrocorp.retrogame"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:3:5-67
+11-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:3:22-64
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:4:5-80
+12-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:4:22-77
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:5-79
+13-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:26:22-76
+14    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+14-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:5-98
+14-->[com.google.android.recaptcha:recaptcha:18.4.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\3b8df421932d983fd8ad50702cbfb2a7\transformed\recaptcha-18.4.0\AndroidManifest.xml:9:22-95
+15
+16    <permission
+16-->[androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+17        android:name="com.dybrocorp.retrogame.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+17-->[androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+18        android:protectionLevel="signature" />
+18-->[androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+19
+20    <uses-permission android:name="com.dybrocorp.retrogame.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+20-->[androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+20-->[androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+21
+22    <application
+22-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:6:5-22:19
+23        android:allowBackup="true"
+23-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:7:9-35
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.12.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\7b6531a8d3e191bb738694913902efcd\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+25        android:debuggable="true"
+26        android:extractNativeLibs="false"
+27        android:icon="@mipmap/ic_launcher"
+27-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:8:9-43
+28        android:label="@string/app_name"
+28-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:10:9-41
+29        android:roundIcon="@mipmap/ic_launcher_round"
+29-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:9:9-54
+30        android:supportsRtl="true"
+30-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:11:9-35
+31        android:theme="@style/Theme.DybroRetro" >
+31-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:12:9-48
+32        <activity
+32-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:13:9-21:20
+33            android:name="com.dybrocorp.retrogame.MainActivity"
+33-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:14:13-41
+34            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize"
+34-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:16:13-91
+35            android:exported="true" >
+35-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:15:13-36
+36            <intent-filter>
+36-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:17:13-20:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:18:17-69
+37-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:18:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:19:17-77
+39-->C:\Users\Dybro\Desktop\DybroGameRetro\app\src\main\AndroidManifest.xml:19:27-74
+40            </intent-filter>
+41        </activity>
+42        <activity
+42-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:23:9-27:75
+43            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+43-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:24:13-93
+44            android:excludeFromRecents="true"
+44-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:25:13-46
+45            android:exported="false"
+45-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:26:13-37
+46            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+46-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:27:13-72
+47        <!--
+48            Service handling Google Sign-In user revocation. For apps that do not integrate with
+49            Google Sign-In, this service will never be started.
+50        -->
+51        <service
+51-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:33:9-37:51
+52            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+52-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:34:13-89
+53            android:exported="true"
+53-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:35:13-36
+54            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+54-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:36:13-107
+55            android:visibleToInstantApps="true" />
+55-->[com.google.android.gms:play-services-auth:21.0.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\4418304e369d395226368b4368c72e60\transformed\play-services-auth-21.0.0\AndroidManifest.xml:37:13-48
+56
+57        <activity
+57-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:29:9-46:20
+58            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+58-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:30:13-80
+59            android:excludeFromRecents="true"
+59-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:31:13-46
+60            android:exported="true"
+60-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:32:13-36
+61            android:launchMode="singleTask"
+61-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:33:13-44
+62            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+62-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:34:13-72
+63            <intent-filter>
+63-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:35:13-45:29
+64                <action android:name="android.intent.action.VIEW" />
+64-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+64-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+65
+66                <category android:name="android.intent.category.DEFAULT" />
+66-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+66-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+67                <category android:name="android.intent.category.BROWSABLE" />
+67-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+67-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+68
+69                <data
+69-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+70                    android:host="firebase.auth"
+70-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+71                    android:path="/"
+71-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+72                    android:scheme="genericidp" />
+72-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+73            </intent-filter>
+74        </activity>
+75        <activity
+75-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:47:9-64:20
+76            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+76-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:48:13-79
+77            android:excludeFromRecents="true"
+77-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:49:13-46
+78            android:exported="true"
+78-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:50:13-36
+79            android:launchMode="singleTask"
+79-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:51:13-44
+80            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+80-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:52:13-72
+81            <intent-filter>
+81-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:53:13-63:29
+82                <action android:name="android.intent.action.VIEW" />
+82-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:17-69
+82-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:36:25-66
+83
+84                <category android:name="android.intent.category.DEFAULT" />
+84-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:17-76
+84-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:38:27-73
+85                <category android:name="android.intent.category.BROWSABLE" />
+85-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:17-78
+85-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:39:27-75
+86
+87                <data
+87-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:41:17-44:51
+88                    android:host="firebase.auth"
+88-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:42:21-49
+89                    android:path="/"
+89-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:43:21-37
+90                    android:scheme="recaptcha" />
+90-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:44:21-48
+91            </intent-filter>
+92        </activity>
+93
+94        <service
+94-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:66:9-72:19
+95            android:name="com.google.firebase.components.ComponentDiscoveryService"
+95-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:67:13-84
+96            android:directBootAware="true"
+96-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:32:13-43
+97            android:exported="false" >
+97-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:68:13-37
+98            <meta-data
+98-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:69:13-71:85
+99                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+99-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:70:17-109
+100                android:value="com.google.firebase.components.ComponentRegistrar" />
+100-->[com.google.firebase:firebase-auth:22.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\da43d0ea57676cb36d8928029ede42a0\transformed\firebase-auth-22.3.1\AndroidManifest.xml:71:17-82
+101            <meta-data
+101-->[com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:12:13-14:85
+102                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+102-->[com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:13:17-116
+103                android:value="com.google.firebase.components.ComponentRegistrar" />
+103-->[com.google.firebase:firebase-common-ktx:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\5581688f605b3ce955d903e986077ad2\transformed\firebase-common-ktx-20.4.3\AndroidManifest.xml:14:17-82
+104            <meta-data
+104-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:35:13-37:85
+105                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+105-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:36:17-109
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:37:17-82
+107        </service>
+108
+109        <activity
+109-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+110            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+110-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+111            android:exported="false"
+111-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+112            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+112-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\dedf8e827303f58ff85b4facecedfd92\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+113
+114        <provider
+114-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:23:9-28:39
+115            android:name="com.google.firebase.provider.FirebaseInitProvider"
+115-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:24:13-77
+116            android:authorities="com.dybrocorp.retrogame.firebaseinitprovider"
+116-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:25:13-72
+117            android:directBootAware="true"
+117-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:26:13-43
+118            android:exported="false"
+118-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:27:13-37
+119            android:initOrder="100" />
+119-->[com.google.firebase:firebase-common:20.4.3] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\331e443286bc73243565a234a1e150c1\transformed\firebase-common-20.4.3\AndroidManifest.xml:28:13-36
+120        <provider
+120-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+121            android:name="androidx.startup.InitializationProvider"
+121-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+122            android:authorities="com.dybrocorp.retrogame.androidx-startup"
+122-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+123            android:exported="false" >
+123-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+124            <meta-data
+124-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+125                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+125-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+126                android:value="androidx.startup" />
+126-->[androidx.emoji2:emoji2:1.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1e156d1767ddd38ab664ba0fd35bd4f4\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+127            <meta-data
+127-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+128                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+128-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+129                android:value="androidx.startup" />
+129-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\ad0da8217b72ab0de7bea77fb00df1d8\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+130            <meta-data
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+131                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+131-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+132                android:value="androidx.startup" />
+132-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+133        </provider>
+134
+135        <meta-data
+135-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:21:9-23:69
+136            android:name="com.google.android.gms.version"
+136-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:22:13-58
+137            android:value="@integer/google_play_services_version" />
+137-->[com.google.android.gms:play-services-basement:18.3.0] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\d9f96579bf114db920cbfb81ebe29c3f\transformed\play-services-basement-18.3.0\AndroidManifest.xml:23:13-66
+138
+139        <receiver
+139-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+140            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+140-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+141            android:directBootAware="false"
+141-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+142            android:enabled="true"
+142-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+143            android:exported="true"
+143-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+144            android:permission="android.permission.DUMP" >
+144-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+145            <intent-filter>
+145-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+146                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+146-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+146-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+147            </intent-filter>
+148            <intent-filter>
+148-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+149                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+149-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+149-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+150            </intent-filter>
+151            <intent-filter>
+151-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+152                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+152-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+152-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+153            </intent-filter>
+154            <intent-filter>
+154-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+155                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+155-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+155-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\Dybro\.gradle\caches\9.0.0\transforms\1f61092f3bcc042a332441c8c4510570\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+156            </intent-filter>
+157        </receiver>
+158    </application>
+159
+160</manifest>
