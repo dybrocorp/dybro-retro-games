@@ -38,30 +38,82 @@ import kotlinx.coroutines.launch
 @Composable
 fun InGameMenuOverlay(
     onClose: () -> Unit,
-    onSave: () -> Unit,
-    onLoad: () -> Unit,
-    onExit: () -> Unit
+    onSave: (Int) -> Unit,
+    onLoad: (Int) -> Unit,
+    onExit: () -> Unit,
+    onScreenshot: () -> Unit,
+    slots: List<SaveSlot> = emptyList(),
+    speedMultiplier: Float = 1.0f,
+    onSpeedChange: (Float) -> Unit = {}
 ) {
+    var activeTab by remember { mutableStateOf(0) } // 0=Menu, 1=Save, 2=Load
+
     Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(Color.Black.copy(alpha = 0.7f)),
+        modifier = Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.75f)),
         contentAlignment = Alignment.Center
     ) {
         Column(
             modifier = Modifier
-                .fillMaxWidth(0.7f)
-                .background(Color(0xFF1A1A2E), RoundedCornerShape(16.dp))
-                .padding(24.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp),
+                .fillMaxWidth(0.85f)
+                .background(Color(0xFF1A1A2E), RoundedCornerShape(20.dp))
+                .padding(20.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text("Menú de Juego", color = Color.White, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-            Spacer(modifier = Modifier.height(4.dp))
-            Button(onClick = onClose, modifier = Modifier.fillMaxWidth()) { Text("Continuar") }
-            Button(onClick = onSave, modifier = Modifier.fillMaxWidth()) { Text("Guardar Partida") }
-            Button(onClick = onLoad, modifier = Modifier.fillMaxWidth()) { Text("Cargar Partida") }
-            Button(onClick = onExit, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFB00020))) { Text("Salir del Juego") }
+
+            // Speed Slider
+            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+                Text("⚡", fontSize = 18.sp)
+                Slider(
+                    value = speedMultiplier,
+                    onValueChange = onSpeedChange,
+                    valueRange = 0.5f..2.0f,
+                    steps = 5,
+                    modifier = Modifier.weight(1f).padding(horizontal = 8.dp)
+                )
+                Text("${"%.0f".format(speedMultiplier * 100)}%", color = Color.White, fontSize = 13.sp)
+            }
+
+            Divider(color = Color.White.copy(alpha = 0.1f))
+
+            if (activeTab == 0) {
+                Button(onClick = onClose, modifier = Modifier.fillMaxWidth()) { Text("▶  Continuar") }
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Button(onClick = { activeTab = 1 }, modifier = Modifier.weight(1f)) { Text("💾 Guardar") }
+                    Button(onClick = { activeTab = 2 }, modifier = Modifier.weight(1f)) { Text("📂 Cargar") }
+                }
+                Button(onClick = onScreenshot, modifier = Modifier.fillMaxWidth()) { Text("📸 Captura de Pantalla") }
+                Button(onClick = onExit, modifier = Modifier.fillMaxWidth(),
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFB00020))) { Text("⏹  Salir del Juego") }
+            } else {
+                val title = if (activeTab == 1) "Guardar en Slot" else "Cargar desde Slot"
+                Text(title, color = Color.White, fontWeight = FontWeight.Bold)
+                LazyVerticalGrid(
+                    columns = GridCells.Fixed(2),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    modifier = Modifier.height(220.dp)
+                ) {
+                    items(slots) { slot ->
+                        Surface(
+                            color = if (slot.exists) Color(0xFF2A2A4A) else Color(0xFF111122),
+                            shape = RoundedCornerShape(8.dp),
+                            modifier = Modifier.clickable {
+                                if (activeTab == 1) onSave(slot.index)
+                                else if (slot.exists) onLoad(slot.index)
+                                activeTab = 0
+                            }
+                        ) {
+                            Column(modifier = Modifier.padding(8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                                Text("Slot ${slot.index + 1}", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                                Text(slot.timestamp, color = Color(0xFFAAAAAA), fontSize = 10.sp)
+                            }
+                        }
+                    }
+                }
+                Button(onClick = { activeTab = 0 }, modifier = Modifier.fillMaxWidth()) { Text("← Volver") }
+            }
         }
     }
 }
@@ -73,8 +125,12 @@ fun DashboardScreen(
     settings: AppSettings,
     authManager: AuthManager,
     statsManager: StatsManager,
+    libraryManager: LibraryManager,
     onGameClick: (Game) -> Unit,
     onDeleteClick: (Game) -> Unit,
+    onFavoriteClick: (Game) -> Unit,
+    favorites: Set<String>,
+    recents: List<Game>,
     onAddClick: () -> Unit,
     onCoreClick: () -> Unit,
     onThemeSelected: (AppTheme) -> Unit,
@@ -125,7 +181,7 @@ fun DashboardScreen(
             }
 
             when (currentTab) {
-                0 -> GameGrid(filteredGames, theme, onGameClick, onDeleteClick)
+                0 -> HomeTab(filteredGames, recents, favorites, theme, onGameClick, onDeleteClick, onFavoriteClick)
                 1 -> SystemCategories(filteredGames, theme, onGameClick, onDeleteClick)
                 3 -> ThemesScreen(theme, onThemeSelected)
                 4 -> SettingsScreen(theme, settings, authManager, statsManager, onSettingsChanged)
@@ -171,6 +227,60 @@ fun SearchBar(theme: AppTheme, query: String, onQueryChange: (String) -> Unit) {
 }
 
 @Composable
+fun HomeTab(
+    allGames: List<Game>,
+    recents: List<Game>,
+    favorites: Set<String>,
+    theme: AppTheme,
+    onGameClick: (Game) -> Unit,
+    onDeleteClick: (Game) -> Unit,
+    onFavoriteClick: (Game) -> Unit
+) {
+    Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+        // Continuar Jugando
+        if (recents.isNotEmpty()) {
+            Text("▶️ Continuar Jugando", color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+            Spacer(modifier = Modifier.height(8.dp))
+            Row(modifier = Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                recents.forEach { game ->
+                    Box(modifier = Modifier.width(140.dp)) {
+                        GameCard(game, theme, favorites.contains(game.path), onGameClick, onDeleteClick, onFavoriteClick)
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.height(20.dp))
+        }
+        // Favoritos
+        val favGames = allGames.filter { favorites.contains(it.path) }
+        if (favGames.isNotEmpty()) {
+            Text("⭐ Favoritos", color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+            Spacer(modifier = Modifier.height(8.dp))
+            Row(modifier = Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                favGames.forEach { game ->
+                    Box(modifier = Modifier.width(140.dp)) {
+                        GameCard(game, theme, true, onGameClick, onDeleteClick, onFavoriteClick)
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.height(20.dp))
+        }
+        // Todos los juegos
+        Text("🎮 Todos los juegos (${allGames.size})", color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+        Spacer(modifier = Modifier.height(8.dp))
+        LazyVerticalGrid(
+            columns = GridCells.Fixed(2),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+            modifier = Modifier.height(600.dp)
+        ) {
+            items(allGames) { game ->
+                GameCard(game, theme, favorites.contains(game.path), onGameClick, onDeleteClick, onFavoriteClick)
+            }
+        }
+    }
+}
+
+@Composable
 fun GameGrid(games: List<Game>, theme: AppTheme, onGameClick: (Game) -> Unit, onDeleteClick: (Game) -> Unit) {
     Column {
         Text("Todos los juegos (${games.size})", color = theme.textPrimary, fontWeight = FontWeight.Bold)
@@ -181,14 +291,14 @@ fun GameGrid(games: List<Game>, theme: AppTheme, onGameClick: (Game) -> Unit, on
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             items(games) { game ->
-                GameCard(game, theme, onGameClick, onDeleteClick)
+                GameCard(game, theme, false, onGameClick, onDeleteClick, {})
             }
         }
     }
 }
 
 @Composable
-fun GameCard(game: Game, theme: AppTheme, onClick: (Game) -> Unit, onDeleteClick: (Game) -> Unit) {
+fun GameCard(game: Game, theme: AppTheme, isFavorite: Boolean, onClick: (Game) -> Unit, onDeleteClick: (Game) -> Unit, onFavoriteClick: (Game) -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -197,12 +307,9 @@ fun GameCard(game: Game, theme: AppTheme, onClick: (Game) -> Unit, onDeleteClick
             .background(theme.surface)
             .clickable { onClick(game) }
     ) {
-        // Fallback textual detrás de la imagen por si no carga
         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             Text(game.title.take(3).uppercase(), color = theme.textSecondary.copy(alpha=0.3f), fontSize = 48.sp, fontWeight = FontWeight.Bold)
         }
-        
-        // Carátula Dinámica con Coil
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
                 .data(CoverArtManager.getCoverUrl(game))
@@ -212,54 +319,38 @@ fun GameCard(game: Game, theme: AppTheme, onClick: (Game) -> Unit, onDeleteClick
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop
         )
-
-        // Overlay con Gradiente
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(
-                    Brush.verticalGradient(
-                        listOf(Color.Transparent, Color.Black.copy(alpha = 0.9f))
-                    )
-                )
+                .background(Brush.verticalGradient(listOf(Color.Transparent, Color.Black.copy(alpha = 0.9f))))
         )
-        
         Column(
-            modifier = Modifier
-                .align(Alignment.BottomStart)
-                .padding(12.dp)
+            modifier = Modifier.align(Alignment.BottomStart).padding(12.dp)
         ) {
-            Surface(
-                color = theme.accent.copy(alpha = 0.2f),
-                shape = RoundedCornerShape(4.dp)
-            ) {
-                Text(
-                    text = game.system.name,
-                    color = theme.accent,
-                    fontSize = 10.sp,
-                    modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
-                )
+            Surface(color = theme.accent.copy(alpha = 0.2f), shape = RoundedCornerShape(4.dp)) {
+                Text(game.system.name, color = theme.accent, fontSize = 10.sp, modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp))
             }
             Spacer(modifier = Modifier.height(4.dp))
-            Text(
-                text = game.title,
-                color = Color.White,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Bold,
-                maxLines = 1
-            )
+            Text(game.title, color = Color.White, fontSize = 14.sp, fontWeight = FontWeight.Bold, maxLines = 1)
         }
-        
-        // Botón de eliminar
-        IconButton(
-            onClick = { onDeleteClick(game) },
-            modifier = Modifier
-                .align(Alignment.TopEnd)
-                .padding(4.dp)
-                .background(Color.Black.copy(alpha = 0.5f), RoundedCornerShape(12.dp))
-                .size(24.dp)
+        // Botones de acción
+        Row(
+            modifier = Modifier.align(Alignment.TopEnd).padding(4.dp),
+            horizontalArrangement = Arrangement.spacedBy(2.dp)
         ) {
-            Icon(Icons.Default.Delete, contentDescription = "Eliminar", tint = Color.White, modifier = Modifier.size(16.dp))
+            IconButton(
+                onClick = { onFavoriteClick(game) },
+                modifier = Modifier.background(Color.Black.copy(alpha = 0.5f), RoundedCornerShape(12.dp)).size(28.dp)
+            ) {
+                Icon(if (isFavorite) Icons.Default.Star else Icons.Default.StarBorder, contentDescription = "Favorito",
+                    tint = if (isFavorite) Color(0xFFFFD700) else Color.White, modifier = Modifier.size(16.dp))
+            }
+            IconButton(
+                onClick = { onDeleteClick(game) },
+                modifier = Modifier.background(Color.Black.copy(alpha = 0.5f), RoundedCornerShape(12.dp)).size(28.dp)
+            ) {
+                Icon(Icons.Default.Delete, contentDescription = "Eliminar", tint = Color.White, modifier = Modifier.size(16.dp))
+            }
         }
     }
 }
@@ -509,17 +600,35 @@ fun SettingsScreen(theme: AppTheme, settings: AppSettings, authManager: AuthMana
                 .background(theme.surface, RoundedCornerShape(12.dp))
                 .padding(16.dp)
         ) {
-            Text("Opacidad de los controles", color = theme.textPrimary, fontWeight = FontWeight.Medium)
-            Text("${(settings.buttonOpacity * 100).toInt()}%", color = theme.accent, fontSize = 12.sp)
+            Text("Opacidad de Botones", color = theme.textPrimary, fontWeight = FontWeight.Medium)
             Slider(
                 value = settings.buttonOpacity,
                 onValueChange = { onSettingsChanged(settings.copy(buttonOpacity = it)) },
                 valueRange = 0.1f..1.0f,
-                colors = SliderDefaults.colors(
-                    thumbColor = theme.accent,
-                    activeTrackColor = theme.accent
-                )
+                colors = SliderDefaults.colors(thumbColor = theme.accent, activeTrackColor = theme.accent)
             )
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+        
+        // Auto-save Picker
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(theme.surface, RoundedCornerShape(12.dp))
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column {
+                Text("Autoguardado", color = theme.textPrimary, fontWeight = FontWeight.Medium)
+                Text("Tiempo entre guardados", color = theme.textSecondary, fontSize = 12.sp)
+            }
+            val minText = if (settings.autoSaveMinutes == 0) "Desactivado" else "${settings.autoSaveMinutes} min"
+            Text(minText, color = theme.accent, fontWeight = FontWeight.Bold, modifier = Modifier.clickable {
+                val nextVal = when(settings.autoSaveMinutes) { 0 -> 1; 1 -> 3; 3 -> 5; 5 -> 10; else -> 0 }
+                onSettingsChanged(settings.copy(autoSaveMinutes = nextVal))
+            }.padding(8.dp))
         }
 
         Spacer(modifier = Modifier.height(16.dp))

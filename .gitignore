@@ -20,7 +20,7 @@ cores_tmp/
 *.keystore
 
 # Google Services (contiene datos privados de Firebase)
-app/google-services.json
+
 
 # Logs y errores de build
 build_error*.txt

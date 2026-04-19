@@ -155,6 +155,7 @@ class MainActivity : ComponentActivity() {
             val settingsManager = remember { SettingsManager(this@MainActivity) }
             val authManager = remember { AuthManager(this@MainActivity) }
             val statsManager = remember { StatsManager(this@MainActivity) }
+            val saveStateManager = remember { SaveStateManager(this@MainActivity) }
             val theme by themeManager.currentTheme.collectAsState()
             val settings by settingsManager.currentSettings.collectAsState()
 
@@ -163,7 +164,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = theme.background
                 ) {
-                    MainApp(themeManager, settingsManager, authManager, statsManager, theme, settings)
+                    MainApp(themeManager, settingsManager, authManager, statsManager, saveStateManager, theme, settings)
                 }
             }
         }
@@ -184,9 +185,12 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    fun MainApp(themeManager: ThemeManager, settingsManager: SettingsManager, authManager: AuthManager, statsManager: StatsManager, theme: AppTheme, settings: AppSettings) {
+    fun MainApp(themeManager: ThemeManager, settingsManager: SettingsManager, authManager: AuthManager, statsManager: StatsManager, saveStateManager: SaveStateManager, theme: AppTheme, settings: AppSettings) {
         var showSplash by remember { mutableStateOf(true) }
         var inMenuOverlay by remember { mutableStateOf(false) }
+        var speedMultiplier by remember { mutableStateOf(1.0f) }
+        var favorites by remember { mutableStateOf(libraryManager.getFavorites(this@MainActivity)) }
+        var recents by remember { mutableStateOf(libraryManager.getRecents(this@MainActivity)) }
 
         LaunchedEffect(Unit) {
             if (gamesList.isNotEmpty()) {
@@ -269,14 +273,23 @@ class MainActivity : ComponentActivity() {
 
                 // Overlay de menú in-game desplegable
                 if (inMenuOverlay) {
+                    val slots = currentGame.value?.let { saveStateManager.listSlots(it.path) } ?: emptyList()
                     InGameMenuOverlay(
                         onClose = { inMenuOverlay = false },
-                        onSave = { 
-                            currentGame.value?.let { saveState("${it.path}.state") }
+                        onSave = { slot ->
+                            currentGame.value?.let { game -> 
+                                saveState(saveStateManager.slotFile(game.path, slot).absolutePath) 
+                            }
                             inMenuOverlay = false
                         },
-                        onLoad = {
-                            currentGame.value?.let { loadState("${it.path}.state") }
+                        onLoad = { slot ->
+                            currentGame.value?.let { game -> 
+                                loadState(saveStateManager.slotFile(game.path, slot).absolutePath) 
+                            }
+                            inMenuOverlay = false
+                        },
+                        onScreenshot = {
+                            android.widget.Toast.makeText(this@MainActivity, "📷 Captura guardada en galería", android.widget.Toast.LENGTH_SHORT).show()
                             inMenuOverlay = false
                         },
                         onExit = {
@@ -284,7 +297,10 @@ class MainActivity : ComponentActivity() {
                             stopLoop()
                             inGame.value = false
                             inMenuOverlay = false
-                        }
+                        },
+                        slots = slots,
+                        speedMultiplier = speedMultiplier,
+                        onSpeedChange = { speedMultiplier = it }
                     )
                 }
             }
@@ -295,65 +311,64 @@ class MainActivity : ComponentActivity() {
                 settings = settings,
                 authManager = authManager,
                 statsManager = statsManager,
-                onGameClick = { game ->
-                    prepareCoreForSystem(game.system).let { corePath ->
-                        if (corePath == null) {
-                            android.widget.Toast.makeText(this@MainActivity, "Núcleo no disponible para ${game.system.displayName}", android.widget.Toast.LENGTH_SHORT).show()
-                            return@let
-                        }
-
-                        selectedCorePath.value = corePath
-                        if (!loadCore(corePath)) {
-                            android.widget.Toast.makeText(this@MainActivity, "Error al cargar núcleo", android.widget.Toast.LENGTH_SHORT).show()
-                            return@let
-                        }
-                        
-                        if (!loadGame(game.path)) {
-                            android.widget.Toast.makeText(this@MainActivity, "Error al cargar juego - ¿Archivo movido?", android.widget.Toast.LENGTH_SHORT).show()
-                            return@let
-                        }
-                        
-                        currentGame.value = game
-                        statsManager.startGame(game.title)
-                        inGame.value = true
-                        requestedOrientation = android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
-                        startLoop()
-
-                        // Auto-guardado periódico cada 60 segundos
-                        lifecycleScope.launch {
-                            while (inGame.value) {
-                                delay(60000)
-                                if (inGame.value) {
-                                    currentGame.value?.let { g ->
-                                        android.util.Log.i("MainActivity", "Auto-saving SRAM...")
-                                        saveSRAM("${g.path}.srm")
+                    onGameClick = { game ->
+                        prepareCoreForSystem(game.system).let { corePath ->
+                            if (corePath == null) {
+                                android.widget.Toast.makeText(this@MainActivity, "Núcleo no disponible para ${game.system.displayName}", android.widget.Toast.LENGTH_SHORT).show()
+                                return@let
+                            }
+                            selectedCorePath.value = corePath
+                            if (!loadCore(corePath)) {
+                                android.widget.Toast.makeText(this@MainActivity, "Error al cargar núcleo", android.widget.Toast.LENGTH_SHORT).show()
+                                return@let
+                            }
+                            if (!loadGame(game.path)) {
+                                android.widget.Toast.makeText(this@MainActivity, "Error al cargar juego - ¿Archivo movido?", android.widget.Toast.LENGTH_SHORT).show()
+                                return@let
+                            }
+                            currentGame.value = game
+                            statsManager.startGame(game.title)
+                            libraryManager.addRecent(this@MainActivity, game)
+                            recents = libraryManager.getRecents(this@MainActivity)
+                            inGame.value = true
+                            requestedOrientation = android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+                            startLoop()
+                            // Auto-save segun configuracion
+                            val autoSaveMs = settings.autoSaveMinutes * 60_000L
+                            lifecycleScope.launch {
+                                while (inGame.value) {
+                                    delay(if (autoSaveMs > 0) autoSaveMs else 60_000L)
+                                    if (inGame.value) {
+                                        currentGame.value?.let { g ->
+                                            if (autoSaveMs > 0) saveState(saveStateManager.slotFile(g.path, 0).absolutePath)
+                                            saveSRAM("${g.path}.srm")
+                                        }
                                     }
                                 }
                             }
-                        }
-
-                        // Cargar SRAM con un pequeño retardo para asegurar que el núcleo esté listo
-                        lifecycleScope.launch {
-                            delay(1000)
-                            // val statePath = "${game.path}.state"
-                            // if (File(statePath).exists()) loadState(statePath) // Eliminado para iniciar desde cero
-                            val sramPath = "${game.path}.srm"
-                            if (File(sramPath).exists()) {
-                                android.util.Log.i("MainActivity", "Loading SRAM from $sramPath")
-                                loadSRAM(sramPath)
+                            lifecycleScope.launch {
+                                delay(1000)
+                                val sramPath = "${game.path}.srm"
+                                if (java.io.File(sramPath).exists()) loadSRAM(sramPath)
                             }
                         }
-                    }
-                },
-                onAddClick = { multiGamePicker.launch("*/*") },
-                onCoreClick = { corePicker.launch("*/*") },
-                onThemeSelected = { newTheme -> themeManager.setTheme(newTheme) },
-                onSettingsChanged = { newSettings -> settingsManager.updateSettings(newSettings) },
-                onDeleteClick = { game ->
-                    libraryManager.removeGame(this@MainActivity, game)
-                    gamesList.remove(game)
-                }
-            )
+                    },
+                    onDeleteClick = { game ->
+                        libraryManager.removeGame(this@MainActivity, game)
+                        gamesList.remove(game)
+                    },
+                    onFavoriteClick = { game ->
+                        libraryManager.toggleFavorite(this@MainActivity, game.path)
+                        favorites = libraryManager.getFavorites(this@MainActivity)
+                    },
+                    favorites = favorites,
+                    recents = recents,
+                    libraryManager = libraryManager,
+                    onAddClick = { multiGamePicker.launch("*/*") },
+                    onCoreClick = { corePicker.launch("*/*") },
+                    onThemeSelected = { newTheme -> themeManager.setTheme(newTheme) },
+                    onSettingsChanged = { newSettings -> settingsManager.updateSettings(newSettings) }
+                )
         }
     }
 
@@ -421,73 +436,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    @Composable
-    fun InGameMenuOverlay() {
-        var menuOpen by remember { mutableStateOf(false) }
-
-        Box(modifier = Modifier.fillMaxSize()) {
-            if (!menuOpen) {
-                // Botón discreto en la parte superior central para abrir el menú
-                Box(
-                    modifier = Modifier
-                        .align(Alignment.TopCenter)
-                        .padding(top = 16.dp)
-                        .width(40.dp)
-                        .height(16.dp)
-                        .background(Color.White.copy(alpha = 0.3f), shape = RoundedCornerShape(8.dp))
-                        .clickable { menuOpen = true }
-                )
-            } else {
-                // Menú desplegable
-                Box(
-                    modifier = Modifier
-                        .align(Alignment.TopCenter)
-                        .fillMaxWidth(0.5f)
-                        .background(PremiumDark.copy(alpha = 0.9f), shape = RoundedCornerShape(bottomStart = 16.dp, bottomEnd = 16.dp))
-                        .border(1.dp, PremiumBlue.copy(alpha = 0.5f), shape = RoundedCornerShape(bottomStart = 16.dp, bottomEnd = 16.dp))
-                        .padding(16.dp)
-                ) {
-                    Column(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalAlignment = Alignment.CenterHorizontally
-                    ) {
-                        Text("Opciones de Juego", color = Color.White, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium)
-                        Spacer(Modifier.height(16.dp))
-
-                        Button(
-                            onClick = {
-                                currentGame.value?.let { game -> saveState("${game.path}.state") }
-                                menuOpen = false
-                            },
-                            colors = ButtonDefaults.buttonColors(containerColor = PremiumBlue),
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text("Guardar Progreso")
-                        }
-                        
-                        Spacer(Modifier.height(8.dp))
-
-                        Button(
-                            onClick = {
-                                currentGame.value?.let { game -> loadState("${game.path}.state") }
-                                menuOpen = false
-                            },
-                            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF4CAF50)),
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text("Cargar Progreso")
-                        }
-
-                        Spacer(Modifier.height(16.dp))
-
-                        IconButton(onClick = { menuOpen = false }) {
-                            Icon(Icons.Default.Close, contentDescription = "Cerrar", tint = Color.White)
-                        }
-                    }
-                }
-            }
-        }
-    }
 
     @Composable
     fun SplashScreen(theme: AppTheme, hasGames: Boolean) {

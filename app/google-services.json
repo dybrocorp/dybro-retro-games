@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "963834883283",
+    "project_id": "dybroretrogames",
+    "storage_bucket": "dybroretrogames.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:963834883283:android:cfb4b181f7a4263bacb826",
+        "android_client_info": {
+          "package_name": "com.dybrocorp.retrogame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "963834883283-np0snt0qo20v2t71ccsf59hnbivcvs3p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dybrocorp.retrogame",
+            "certificate_hash": "6103acee6fbbaaa3ce62cc433433df32f156b2be"
+          }
+        },
+        {
+          "client_id": "963834883283-i5c9cj71gifuiq1a22v3g4sk0p74g7e2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoUy5d44TtskZF5endXJQNSnZ2p_kLvWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "963834883283-i5c9cj71gifuiq1a22v3g4sk0p74g7e2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

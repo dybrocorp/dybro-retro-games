@@ -18,6 +18,9 @@ enum class GameSystem(val displayName: String, val extensions: List<String>) {
     N64("Nintendo 64", listOf("n64", "z64", "v64")),
     PSP("PlayStation Portable", listOf("iso", "pbp")),
     NES("Nintendo (NES)", listOf("nes")),
+    PS1("PlayStation 1", listOf("bin", "cue")),
+    GB("Game Boy", listOf("gb")),
+    GBC("Game Boy Color", listOf("gbc")),
     UNKNOWN("Desconocido", emptyList());
 
     companion object {
@@ -55,21 +58,50 @@ class LibraryManager {
     fun loadLibrary(context: Context): List<Game> {
         val file = File(context.filesDir, "library.json")
         if (!file.exists()) return emptyList()
-        
         return try {
             val json = file.readText()
             val type = object : TypeToken<List<Game>>() {}.type
             val games: List<Game> = Gson().fromJson(json, type)
-            // Filtrar juegos cuyo archivo ya no existe O tienen sistema desconocido
             games.filter { File(it.path).exists() && it.system != GameSystem.UNKNOWN }
-        } catch (e: Exception) {
-            emptyList()
-        }
+        } catch (e: Exception) { emptyList() }
     }
 
     fun removeGame(context: Context, gameToRemove: Game) {
         val currentGames = loadLibrary(context).toMutableList()
         currentGames.removeAll { it.path == gameToRemove.path }
         saveLibrary(context, currentGames)
+    }
+
+    // --- Favorites ---
+    fun getFavorites(context: Context): Set<String> {
+        val prefs = context.getSharedPreferences("library_extras", Context.MODE_PRIVATE)
+        return prefs.getStringSet("favorites", emptySet()) ?: emptySet()
+    }
+
+    fun toggleFavorite(context: Context, gamePath: String) {
+        val prefs = context.getSharedPreferences("library_extras", Context.MODE_PRIVATE)
+        val favs = getFavorites(context).toMutableSet()
+        if (favs.contains(gamePath)) favs.remove(gamePath) else favs.add(gamePath)
+        prefs.edit().putStringSet("favorites", favs).apply()
+    }
+
+    fun isFavorite(context: Context, gamePath: String): Boolean = getFavorites(context).contains(gamePath)
+
+    // --- Recent Games ---
+    fun addRecent(context: Context, game: Game) {
+        val prefs = context.getSharedPreferences("library_extras", Context.MODE_PRIVATE)
+        val recents = getRecents(context).toMutableList()
+        recents.removeAll { it.path == game.path }
+        recents.add(0, game)
+        prefs.edit().putString("recents", Gson().toJson(recents.take(10))).apply()
+    }
+
+    fun getRecents(context: Context): List<Game> {
+        val prefs = context.getSharedPreferences("library_extras", Context.MODE_PRIVATE)
+        val json = prefs.getString("recents", null) ?: return emptyList()
+        return try {
+            val type = object : TypeToken<List<Game>>() {}.type
+            Gson().fromJson(json, type)
+        } catch (e: Exception) { emptyList() }
     }
 }
