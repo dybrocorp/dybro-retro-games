@@ -303,6 +303,7 @@ class MainActivity : ComponentActivity() {
                         onExit = {
                             statsManager.stopGame()
                             stopLoop()
+                            requestedOrientation = android.content.pm.ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED
                             inGame.value = false
                             inMenuOverlay = false
                         },
@@ -338,8 +339,10 @@ class MainActivity : ComponentActivity() {
                             statsManager.startGame(game.title)
                             libraryManager.addRecent(this@MainActivity, game)
                             recents = libraryManager.getRecents(this@MainActivity)
+                            
+                            // Forzar horizontal al entrar
+                            requestedOrientation = android.content.pm.ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
                             inGame.value = true
-                            requestedOrientation = android.content.pm.ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
                             startLoop()
                             // Auto-save segun configuracion
                             val autoSaveMs = settings.autoSaveMinutes * 60_000L
