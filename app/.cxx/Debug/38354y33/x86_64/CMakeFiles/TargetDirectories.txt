@@ -1,3 +1,0 @@
-C:/Users/Dybro/Desktop/DybroGameRetro/app/.cxx/Debug/38354y33/x86_64/CMakeFiles/retro.dir
-C:/Users/Dybro/Desktop/DybroGameRetro/app/.cxx/Debug/38354y33/x86_64/CMakeFiles/edit_cache.dir
-C:/Users/Dybro/Desktop/DybroGameRetro/app/.cxx/Debug/38354y33/x86_64/CMakeFiles/rebuild_cache.dir

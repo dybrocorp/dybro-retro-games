@@ -1,0 +1,28 @@
+# Gradle
+.gradle/
+build/
+**/build/
+local.properties
+
+# Android/IJ
+*.iml
+.idea/
+*.hprof
+captures/
+
+# Native
+.cxx/
+*.so.zip
+cores_tmp/
+
+# Keystore
+*.jks
+*.keystore
+
+# Google Services (contiene datos privados de Firebase)
+app/google-services.json
+
+# Logs y errores de build
+build_error*.txt
+build_log*.txt
+native_build_log.txt
