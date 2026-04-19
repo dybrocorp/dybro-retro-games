@@ -77,6 +77,10 @@ class MainActivity : ComponentActivity() {
             "Oscuro" -> GamepadSkinColors(Color(0xFF424242), Color(0xFF424242), Color(0xFF212121), Color(0xFF424242), Color(0xFF424242))
             "Neón" -> GamepadSkinColors(Color(0xFF00E676), Color(0xFFD500F9), Color(0xFF00B0FF), Color(0xFF651FFF), Color(0xFFF50057))
             "Transparente" -> GamepadSkinColors(Color.Transparent, Color.Transparent, Color.Transparent, Color.Transparent, Color.Transparent)
+            "GBA SP (Delta)" -> GamepadSkinColors(Color(0xFF388E3C), Color(0xFFD32F2F), Color(0xFFE0E0E0), Color(0xFFE0E0E0), Color(0xFF9E9E9E))
+            "NDS Rosa" -> GamepadSkinColors(Color(0xFFEC407A), Color(0xFFEC407A), Color(0xFFF48FB1), Color(0xFFF48FB1), Color(0xFFF48FB1))
+            "SNES Minimal" -> GamepadSkinColors(Color(0xFF5E35B1), Color(0xFF3949AB), Color(0xFFBDBDBD), Color(0xFF9E9E9E), Color(0xFFE0E0E0))
+            "PSP Carbon" -> GamepadSkinColors(Color(0xFF263238), Color(0xFF263238), Color(0xFF37474F), Color(0xFF37474F), Color(0xFF455A64))
             else -> GamepadSkinColors(Color(0xFF388E3C), Color(0xFFD32F2F), Color(0xFF212121), Color(0xFF757575), Color(0xFF616161)) // Clásico
         }
     }
@@ -396,52 +400,95 @@ class MainActivity : ComponentActivity() {
                 .padding(16.dp)
                 .graphicsLayer(alpha = settings.buttonOpacity)
         ) {
-            // Gatillos L y R en las esquinas superiores - Estilo Metálico
-            Row(modifier = Modifier.align(Alignment.TopStart)) {
-                InputButton("L", RETRO_DEVICE_ID_JOYPAD_L, baseColor = skinColors.triggers, width = 80, height = 40)
-            }
-            Row(modifier = Modifier.align(Alignment.TopEnd)) {
-                InputButton("R", RETRO_DEVICE_ID_JOYPAD_R, baseColor = skinColors.triggers, width = 80, height = 40)
-            }
+            val isPSP = gameName.endsWith(".iso", ignoreCase = true) || currentGame.value?.system?.name?.contains("PSP") == true
+            
+            if (isPSP) {
+                // Layout estilo PSP
+                Row(modifier = Modifier.align(Alignment.TopStart)) {
+                    InputButton("L", RETRO_DEVICE_ID_JOYPAD_L, baseColor = skinColors.triggers, width = 90, height = 35)
+                }
+                Row(modifier = Modifier.align(Alignment.TopEnd)) {
+                    InputButton("R", RETRO_DEVICE_ID_JOYPAD_R, baseColor = skinColors.triggers, width = 90, height = 35)
+                }
 
-            // Control de dirección a la izquierda: D-Pad o Joystick
-            Box(
-                modifier = Modifier
-                    .align(Alignment.BottomStart)
-                    .padding(bottom = 16.dp)
-            ) {
-                if (useJoystick) {
-                    VirtualJoystick()
-                } else {
-                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                        InputButton("↑", RETRO_DEVICE_ID_JOYPAD_UP, baseColor = skinColors.dpad)
-                        Row {
-                            InputButton("←", RETRO_DEVICE_ID_JOYPAD_LEFT, baseColor = skinColors.dpad)
-                            Spacer(Modifier.width(48.dp))
-                            InputButton("→", RETRO_DEVICE_ID_JOYPAD_RIGHT, baseColor = skinColors.dpad)
+                Box(modifier = Modifier.align(Alignment.BottomStart).padding(bottom = 16.dp)) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(24.dp)) {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            InputButton("↑", RETRO_DEVICE_ID_JOYPAD_UP, baseColor = skinColors.dpad, size = 45)
+                            Row {
+                                InputButton("←", RETRO_DEVICE_ID_JOYPAD_LEFT, baseColor = skinColors.dpad, size = 45)
+                                Spacer(Modifier.width(36.dp))
+                                InputButton("→", RETRO_DEVICE_ID_JOYPAD_RIGHT, baseColor = skinColors.dpad, size = 45)
+                            }
+                            InputButton("↓", RETRO_DEVICE_ID_JOYPAD_DOWN, baseColor = skinColors.dpad, size = 45)
                         }
-                        InputButton("↓", RETRO_DEVICE_ID_JOYPAD_DOWN, baseColor = skinColors.dpad)
+                        if (useJoystick) {
+                            VirtualJoystick()
+                        }
                     }
                 }
-            }
 
-            // Botones Start y Select en el centro inferior - Estilo Píldora
-            Row(
-                modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 32.dp),
-                horizontalArrangement = Arrangement.spacedBy(24.dp)
-            ) {
-                InputButton("SEL", RETRO_DEVICE_ID_JOYPAD_SELECT, baseColor = skinColors.startSelect, width = 50, height = 25)
-                InputButton("STA", RETRO_DEVICE_ID_JOYPAD_START, baseColor = skinColors.startSelect, width = 50, height = 25)
-            }
+                Box(modifier = Modifier.align(Alignment.BottomEnd).padding(bottom = 32.dp, end = 16.dp)) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        InputButton("▲", RETRO_DEVICE_ID_JOYPAD_X, baseColor = skinColors.b, size = 50)
+                        Row(horizontalArrangement = Arrangement.spacedBy(36.dp)) {
+                            InputButton("■", RETRO_DEVICE_ID_JOYPAD_Y, baseColor = skinColors.b, size = 50)
+                            InputButton("●", RETRO_DEVICE_ID_JOYPAD_A, baseColor = skinColors.a, size = 50)
+                        }
+                        InputButton("x", RETRO_DEVICE_ID_JOYPAD_B, baseColor = skinColors.b, size = 50)
+                    }
+                }
 
-            // Botones de acción a la derecha - Colores N64/GBA
-            Box(modifier = Modifier.align(Alignment.BottomEnd).padding(bottom = 16.dp, end = 16.dp)) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    // Botón B (Rojo/Clásico)
-                    InputButton("B", RETRO_DEVICE_ID_JOYPAD_B, baseColor = skinColors.b, size = 70)
-                    Spacer(Modifier.width(20.dp))
-                    // Botón A (Verde/Clásico)
-                    InputButton("A", RETRO_DEVICE_ID_JOYPAD_A, baseColor = skinColors.a, size = 75)
+                Row(
+                    modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 24.dp),
+                    horizontalArrangement = Arrangement.spacedBy(24.dp)
+                ) {
+                    InputButton("SEL", RETRO_DEVICE_ID_JOYPAD_SELECT, baseColor = skinColors.startSelect, width = 60, height = 25)
+                    InputButton("STA", RETRO_DEVICE_ID_JOYPAD_START, baseColor = skinColors.startSelect, width = 60, height = 25)
+                }
+            } else {
+                // Layout Clásico Nintendo (SNES/GBA)
+                Row(modifier = Modifier.align(Alignment.TopStart)) {
+                    InputButton("L", RETRO_DEVICE_ID_JOYPAD_L, baseColor = skinColors.triggers, width = 80, height = 40)
+                }
+                Row(modifier = Modifier.align(Alignment.TopEnd)) {
+                    InputButton("R", RETRO_DEVICE_ID_JOYPAD_R, baseColor = skinColors.triggers, width = 80, height = 40)
+                }
+
+                Box(
+                    modifier = Modifier
+                        .align(Alignment.BottomStart)
+                        .padding(bottom = 16.dp)
+                ) {
+                    if (useJoystick) {
+                        VirtualJoystick()
+                    } else {
+                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                            InputButton("↑", RETRO_DEVICE_ID_JOYPAD_UP, baseColor = skinColors.dpad)
+                            Row {
+                                InputButton("←", RETRO_DEVICE_ID_JOYPAD_LEFT, baseColor = skinColors.dpad)
+                                Spacer(Modifier.width(48.dp))
+                                InputButton("→", RETRO_DEVICE_ID_JOYPAD_RIGHT, baseColor = skinColors.dpad)
+                            }
+                            InputButton("↓", RETRO_DEVICE_ID_JOYPAD_DOWN, baseColor = skinColors.dpad)
+                        }
+                    }
+                }
+
+                Row(
+                    modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 32.dp),
+                    horizontalArrangement = Arrangement.spacedBy(24.dp)
+                ) {
+                    InputButton("SEL", RETRO_DEVICE_ID_JOYPAD_SELECT, baseColor = skinColors.startSelect, width = 50, height = 25)
+                    InputButton("STA", RETRO_DEVICE_ID_JOYPAD_START, baseColor = skinColors.startSelect, width = 50, height = 25)
+                }
+
+                Box(modifier = Modifier.align(Alignment.BottomEnd).padding(bottom = 16.dp, end = 16.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        InputButton("B", RETRO_DEVICE_ID_JOYPAD_B, baseColor = skinColors.b, size = 70)
+                        Spacer(Modifier.width(20.dp))
+                        InputButton("A", RETRO_DEVICE_ID_JOYPAD_A, baseColor = skinColors.a, size = 75)
+                    }
                 }
             }
         }

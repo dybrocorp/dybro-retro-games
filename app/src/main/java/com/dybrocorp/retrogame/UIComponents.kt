@@ -678,7 +678,7 @@ fun SettingsScreen(theme: AppTheme, settings: AppSettings, authManager: AuthMana
             Text("Selecciona una skin para los botones", color = theme.textSecondary, fontSize = 12.sp)
             Spacer(modifier = Modifier.height(12.dp))
 
-            val skins = listOf("Clásico", "Oscuro", "Neón", "Transparente")
+            val skins = listOf("Clásico", "Oscuro", "Neón", "Transparente", "GBA SP (Delta)", "NDS Rosa", "SNES Minimal", "PSP Carbon")
             Row(modifier = Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 skins.forEach { skin ->
                     val isSelected = settings.gamepadSkin == skin
