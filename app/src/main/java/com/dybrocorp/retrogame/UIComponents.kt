@@ -153,17 +153,19 @@ fun DashboardScreen(
             BottomNavigationBar(currentTab, theme) { currentTab = it }
         },
         floatingActionButton = {
-            FloatingActionButton(
-                onClick = onAddClick,
-                containerColor = theme.accent,
-                contentColor = theme.background,
-                shape = RoundedCornerShape(24.dp)
-            ) {
-                Icon(
-                    Icons.Default.Add, 
-                    contentDescription = "Añadir",
-                    modifier = Modifier.size(32.dp)
-                )
+            if (currentTab == 0 || currentTab == 1) {
+                FloatingActionButton(
+                    onClick = onAddClick,
+                    containerColor = theme.accent,
+                    contentColor = theme.background,
+                    shape = RoundedCornerShape(24.dp)
+                ) {
+                    Icon(
+                        Icons.Default.Add, 
+                        contentDescription = "Añadir",
+                        modifier = Modifier.size(32.dp)
+                    )
+                }
             }
         },
         floatingActionButtonPosition = FabPosition.Center
