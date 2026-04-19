@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.Surface
 import android.view.SurfaceView
 import android.view.SurfaceHolder
+import android.view.KeyEvent
+import android.view.MotionEvent
+import android.view.InputDevice
 import android.net.Uri
 import android.provider.OpenableColumns
 import androidx.activity.ComponentActivity
@@ -79,6 +82,7 @@ class MainActivity : ComponentActivity() {
     }
 
     private val libraryManager = LibraryManager()
+    private lateinit var buttonMapManager: ButtonMapManager
     private var gamesList = mutableStateListOf<Game>()
     private var inGame = mutableStateOf(false)
     private var currentGame = mutableStateOf<Game?>(null)
@@ -143,6 +147,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        buttonMapManager = ButtonMapManager(this)
         android.util.Log.i("MainActivity", "APP STARTED - VERSION: 16:45")
         
         // Cargar biblioteca persistente
@@ -256,6 +261,10 @@ class MainActivity : ComponentActivity() {
                     },
                     modifier = Modifier.fillMaxSize()
                 )
+                
+                if (settings.visualFilter == "CRT") {
+                    Box(modifier = Modifier.fillMaxSize().crtFilter())
+                }
                 
                 Surface(
                     color = theme.surface.copy(alpha = 0.7f),
@@ -612,10 +621,11 @@ class MainActivity : ComponentActivity() {
 
     private fun prepareCoreForSystem(system: GameSystem): String? {
         val coreFileName = when (system) {
-            GameSystem.GBA -> "mgba_libretro_android.so"
+            GameSystem.GBA, GameSystem.GB, GameSystem.GBC -> "mgba_libretro_android.so"
             GameSystem.SNES -> "snes9x_libretro_android.so"
             GameSystem.N64 -> "mupen64plus_next_libretro_android.so"
             GameSystem.PSP -> "ppsspp_libretro_android.so"
+            GameSystem.PS1 -> "pcsx_rearmed_libretro_android.so"
             else -> "nestopia_libretro_android.so" // NES default or fallback
         }
 
@@ -670,6 +680,55 @@ class MainActivity : ComponentActivity() {
     external fun saveSRAM(path: String): Boolean
     external fun loadSRAM(path: String): Boolean
     external fun setPaused(paused: Boolean)
+
+    override fun dispatchKeyEvent(event: KeyEvent): Boolean {
+        if (!inGame.value) return super.dispatchKeyEvent(event)
+        // Si el menú está abierto, que no interfiera el mando con el juego
+        if (inGame.value && !event.isCanceled) {
+            val pressed = event.action == KeyEvent.ACTION_DOWN || event.action == KeyEvent.ACTION_MULTIPLE
+            val retroKey = buttonMapManager.getMapping(event.keyCode) ?: when (event.keyCode) {
+                KeyEvent.KEYCODE_BUTTON_B, KeyEvent.KEYCODE_BACK -> RETRO_DEVICE_ID_JOYPAD_B
+                KeyEvent.KEYCODE_BUTTON_Y -> RETRO_DEVICE_ID_JOYPAD_Y
+                KeyEvent.KEYCODE_BUTTON_SELECT -> RETRO_DEVICE_ID_JOYPAD_SELECT
+                KeyEvent.KEYCODE_BUTTON_START, KeyEvent.KEYCODE_MENU -> RETRO_DEVICE_ID_JOYPAD_START
+                KeyEvent.KEYCODE_DPAD_UP -> RETRO_DEVICE_ID_JOYPAD_UP
+                KeyEvent.KEYCODE_DPAD_DOWN -> RETRO_DEVICE_ID_JOYPAD_DOWN
+                KeyEvent.KEYCODE_DPAD_LEFT -> RETRO_DEVICE_ID_JOYPAD_LEFT
+                KeyEvent.KEYCODE_DPAD_RIGHT -> RETRO_DEVICE_ID_JOYPAD_RIGHT
+                KeyEvent.KEYCODE_BUTTON_A, KeyEvent.KEYCODE_ENTER, KeyEvent.KEYCODE_DPAD_CENTER -> RETRO_DEVICE_ID_JOYPAD_A
+                KeyEvent.KEYCODE_BUTTON_X -> RETRO_DEVICE_ID_JOYPAD_X
+                KeyEvent.KEYCODE_BUTTON_L1 -> RETRO_DEVICE_ID_JOYPAD_L
+                KeyEvent.KEYCODE_BUTTON_R1 -> RETRO_DEVICE_ID_JOYPAD_R
+                else -> null
+            }
+            if (retroKey != null) {
+                updateInput(retroKey, pressed)
+                return true
+            }
+        }
+        return super.dispatchKeyEvent(event)
+    }
+
+    override fun dispatchGenericMotionEvent(event: MotionEvent): Boolean {
+        if (inGame.value && event.isFromSource(InputDevice.SOURCE_JOYSTICK)) {
+            if (event.action == MotionEvent.ACTION_MOVE) {
+                val x = event.getAxisValue(MotionEvent.AXIS_X)
+                val y = event.getAxisValue(MotionEvent.AXIS_Y)
+                val hatX = event.getAxisValue(MotionEvent.AXIS_HAT_X)
+                val hatY = event.getAxisValue(MotionEvent.AXIS_HAT_Y)
+
+                val leftRight = if (Math.abs(x) > Math.abs(hatX)) x else hatX
+                val upDown = if (Math.abs(y) > Math.abs(hatY)) y else hatY
+
+                updateInput(RETRO_DEVICE_ID_JOYPAD_LEFT, leftRight < -0.5f)
+                updateInput(RETRO_DEVICE_ID_JOYPAD_RIGHT, leftRight > 0.5f)
+                updateInput(RETRO_DEVICE_ID_JOYPAD_UP, upDown < -0.5f)
+                updateInput(RETRO_DEVICE_ID_JOYPAD_DOWN, upDown > 0.5f)
+                return true
+            }
+        }
+        return super.dispatchGenericMotionEvent(event)
+    }
 
     companion object {
         init {

@@ -1,4 +1,4 @@
-$cores = @("mgba", "snes9x", "mupen64plus_next", "ppsspp", "nestopia")
+$cores = @("mgba", "snes9x", "mupen64plus_next", "ppsspp", "nestopia", "pcsx_rearmed")
 $base_url = "https://buildbot.libretro.com/nightly/android/latest/arm64-v8a/"
 $dest_dir = "cores_tmp"
 

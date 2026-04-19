@@ -17,6 +17,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -182,7 +184,7 @@ fun DashboardScreen(
 
             when (currentTab) {
                 0 -> HomeTab(filteredGames, recents, favorites, theme, onGameClick, onDeleteClick, onFavoriteClick)
-                1 -> SystemCategories(filteredGames, theme, onGameClick, onDeleteClick)
+                1 -> SystemCategories(filteredGames, favorites, theme, onGameClick, onDeleteClick, onFavoriteClick)
                 3 -> ThemesScreen(theme, onThemeSelected)
                 4 -> SettingsScreen(theme, settings, authManager, statsManager, onSettingsChanged)
                 else -> PlaceholderText("Próximamente", theme)
@@ -392,7 +394,7 @@ fun BottomNavigationBar(selectedTab: Int, theme: AppTheme, onTabSelected: (Int) 
 }
 
 @Composable
-fun SystemCategories(games: List<Game>, theme: AppTheme, onGameClick: (Game) -> Unit, onDeleteClick: (Game) -> Unit) {
+fun SystemCategories(games: List<Game>, favorites: Set<String>, theme: AppTheme, onGameClick: (Game) -> Unit, onDeleteClick: (Game) -> Unit, onFavoriteClick: (Game) -> Unit) {
     val grouped = games.groupBy { it.system }
     Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
         grouped.forEach { (system, systemGames) ->
@@ -401,7 +403,7 @@ fun SystemCategories(games: List<Game>, theme: AppTheme, onGameClick: (Game) -> 
             Row(modifier = Modifier.horizontalScroll(rememberScrollState())) {
                 systemGames.forEach { game ->
                     Box(modifier = Modifier.width(160.dp).padding(end = 12.dp)) {
-                        GameCard(game, theme, onGameClick, onDeleteClick)
+                        GameCard(game, theme, favorites.contains(game.path), onGameClick, onDeleteClick, onFavoriteClick)
                     }
                 }
             }
@@ -633,6 +635,27 @@ fun SettingsScreen(theme: AppTheme, settings: AppSettings, authManager: AuthMana
 
         Spacer(modifier = Modifier.height(16.dp))
 
+        // Filtro Visual Picker
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .background(theme.surface, RoundedCornerShape(12.dp))
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column {
+                Text("Filtro Visual", color = theme.textPrimary, fontWeight = FontWeight.Medium)
+                Text("Efectos gráficos de pantalla", color = theme.textSecondary, fontSize = 12.sp)
+            }
+            Text(settings.visualFilter, color = theme.accent, fontWeight = FontWeight.Bold, modifier = Modifier.clickable {
+                val nextVal = when(settings.visualFilter) { "Normal" -> "CRT"; "CRT" -> "Suavizado"; else -> "Normal" }
+                onSettingsChanged(settings.copy(visualFilter = nextVal))
+            }.padding(8.dp))
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
         // Skin Selector
         Column(
             modifier = Modifier
@@ -755,5 +778,21 @@ fun DybroPassSection(theme: AppTheme, authManager: AuthManager) {
                 )
             }
         }
+    }
+}
+
+fun Modifier.crtFilter() = this.drawWithContent {
+    drawContent()
+    val scanlineWidth = 3f
+    val alpha = 0.15f
+    val scanlineColor = Color.Black.copy(alpha = alpha)
+    
+    for (i in 0..size.height.toInt() step (scanlineWidth * 2).toInt()) {
+        drawLine(
+            color = scanlineColor,
+            start = Offset(0f, i.toFloat()),
+            end = Offset(size.width, i.toFloat()),
+            strokeWidth = scanlineWidth
+        )
     }
 }

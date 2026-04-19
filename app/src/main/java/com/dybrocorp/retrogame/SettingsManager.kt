@@ -11,7 +11,8 @@ data class AppSettings(
     val gamepadSkin: String = "Clásico",
     val speedMultiplier: Float = 1.0f,
     val autoSaveMinutes: Int = 0,      // 0 = desactivado
-    val aspectRatio: String = "4:3"   // "4:3", "16:9", "Stretch"
+    val aspectRatio: String = "4:3",   // "4:3", "16:9", "Stretch"
+    val visualFilter: String = "Normal" // "Normal", "CRT", "Suavizado"
 )
 
 class SettingsManager(private val context: Context) {
@@ -24,7 +25,8 @@ class SettingsManager(private val context: Context) {
             gamepadSkin = prefs.getString("gamepad_skin", "Clásico") ?: "Clásico",
             speedMultiplier = prefs.getFloat("speed_multiplier", 1.0f),
             autoSaveMinutes = prefs.getInt("auto_save_minutes", 0),
-            aspectRatio = prefs.getString("aspect_ratio", "4:3") ?: "4:3"
+            aspectRatio = prefs.getString("aspect_ratio", "4:3") ?: "4:3",
+            visualFilter = prefs.getString("visual_filter", "Normal") ?: "Normal"
         )
     )
     val currentSettings: StateFlow<AppSettings> = _currentSettings.asStateFlow()
@@ -37,6 +39,7 @@ class SettingsManager(private val context: Context) {
             .putFloat("speed_multiplier", settings.speedMultiplier)
             .putInt("auto_save_minutes", settings.autoSaveMinutes)
             .putString("aspect_ratio", settings.aspectRatio)
+            .putString("visual_filter", settings.visualFilter)
             .apply()
         _currentSettings.value = settings
     }
