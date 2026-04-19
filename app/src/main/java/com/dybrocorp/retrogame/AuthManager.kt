@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseUser
 class AuthManager(context: Context) {
     val auth: FirebaseAuth = FirebaseAuth.getInstance()
     var googleSignInClient: GoogleSignInClient
+    private val prefs = context.getSharedPreferences("app_billing", Context.MODE_PRIVATE)
 
     init {
         // ID de cliente Web por defecto (de config en strings via google-services.json)
@@ -29,8 +30,12 @@ class AuthManager(context: Context) {
     }
 
     fun isPremium(): Boolean {
-        // Lógica mockeada: Si está logueado es Premium
-        return getCurrentUser() != null
+        // Mock de compra de la app (no solo por estar logueado)
+        return prefs.getBoolean("is_premium", false)
+    }
+
+    fun purchasePremium() {
+        prefs.edit().putBoolean("is_premium", true).apply()
     }
 
     fun signOut(onComplete: () -> Unit) {

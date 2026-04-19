@@ -421,7 +421,7 @@ fun PlaceholderText(text: String, theme: AppTheme) {
 
 @Composable
 fun ThemesScreen(currentTheme: AppTheme, authManager: AuthManager, onThemeSelected: (AppTheme) -> Unit) {
-    val isPremium = authManager.isPremium()
+    var isPremium by remember { mutableStateOf(authManager.isPremium()) }
     Column {
         Text("Selecciona un Tema", color = currentTheme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         Spacer(modifier = Modifier.height(16.dp))
@@ -572,7 +572,8 @@ fun UserProfileSection(theme: AppTheme, authManager: AuthManager, statsManager: 
 
 @Composable
 fun SettingsScreen(theme: AppTheme, settings: AppSettings, authManager: AuthManager, statsManager: StatsManager, onSettingsChanged: (AppSettings) -> Unit) {
-    val isPremium = authManager.isPremium()
+    var isPremium by remember { mutableStateOf(authManager.isPremium()) }
+    val context = androidx.compose.ui.platform.LocalContext.current
     Column(modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState())) {
         Text("Ajustes del Emulador", color = theme.textPrimary, fontWeight = FontWeight.Bold, fontSize = 20.sp)
         Spacer(modifier = Modifier.height(16.dp))
@@ -705,13 +706,16 @@ fun SettingsScreen(theme: AppTheme, settings: AppSettings, authManager: AuthMana
         Spacer(modifier = Modifier.height(16.dp))
 
         // Dybro Pass Section
-        DybroPassSection(theme, authManager)
+        DybroPassSection(theme, isPremium) {
+            authManager.purchasePremium()
+            isPremium = true
+            android.widget.Toast.makeText(context, "¡Gracias! Tu Dybro Pass está activo", android.widget.Toast.LENGTH_SHORT).show()
+        }
     }
 }
 
 @Composable
-fun DybroPassSection(theme: AppTheme, authManager: AuthManager) {
-    val isPremium = authManager.isPremium()
+fun DybroPassSection(theme: AppTheme, isPremium: Boolean, onPurchase: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -757,7 +761,7 @@ fun DybroPassSection(theme: AppTheme, authManager: AuthManager) {
 
         if (!isPremium) {
             Button(
-                onClick = { /* TODO: Google Play Billing */ },
+                onClick = onPurchase,
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(12.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = theme.accent)
