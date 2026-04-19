@@ -708,16 +708,21 @@ fun SettingsScreen(theme: AppTheme, settings: AppSettings, authManager: AuthMana
         Spacer(modifier = Modifier.height(16.dp))
 
         // Dybro Pass Section
-        DybroPassSection(theme, isPremium) {
-            authManager.purchasePremium()
-            isPremium = true
-            android.widget.Toast.makeText(context, "¡Gracias! Tu Dybro Pass está activo", android.widget.Toast.LENGTH_SHORT).show()
+        val currentUser = authManager.getCurrentUser()
+        DybroPassSection(theme, isPremium, currentUser != null) {
+            if (currentUser != null) {
+                authManager.purchasePremium()
+                isPremium = true
+                android.widget.Toast.makeText(context, "¡Gracias! Tu Dybro Pass está activo", android.widget.Toast.LENGTH_SHORT).show()
+            } else {
+                android.widget.Toast.makeText(context, "Por favor inicia sesión primero", android.widget.Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
 
 @Composable
-fun DybroPassSection(theme: AppTheme, isPremium: Boolean, onPurchase: () -> Unit) {
+fun DybroPassSection(theme: AppTheme, isPremium: Boolean, isAuthenticated: Boolean, onPurchase: () -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -769,7 +774,7 @@ fun DybroPassSection(theme: AppTheme, isPremium: Boolean, onPurchase: () -> Unit
                 colors = ButtonDefaults.buttonColors(containerColor = theme.accent)
             ) {
                 Text(
-                    "Obtener Dybro Pass — COP $12.900/mes",
+                    if (isAuthenticated) "Obtener Dybro Pass — COP $12.900/mes" else "Inicia sesión para ser Premium",
                     color = theme.background,
                     fontWeight = FontWeight.ExtraBold,
                     modifier = Modifier.padding(vertical = 4.dp)

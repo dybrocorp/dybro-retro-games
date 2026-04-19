@@ -30,12 +30,15 @@ class AuthManager(context: Context) {
     }
 
     fun isPremium(): Boolean {
-        // Mock de compra de la app (no solo por estar logueado)
-        return prefs.getBoolean("is_premium", false)
+        val user = getCurrentUser() ?: return false
+        return prefs.getBoolean("is_premium_${user.uid}", false)
     }
 
     fun purchasePremium() {
-        prefs.edit().putBoolean("is_premium", true).apply()
+        val user = getCurrentUser()
+        if (user != null) {
+            prefs.edit().putBoolean("is_premium_${user.uid}", true).apply()
+        }
     }
 
     fun signOut(onComplete: () -> Unit) {
